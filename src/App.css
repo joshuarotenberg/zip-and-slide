@@ -1,0 +1,70 @@
+@media screen and (max-width: 600px) {
+  .slide-container {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slide-container {
+    height: 400px;
+  }
+}
+
+.slide-container {
+  max-width: 800px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  border: white solid 15px;
+  box-shadow: 0 5px 12px 0 rgb(0 0 0 / 50%);
+}
+
+.fade {
+  /* TODO:  image transitions => dynamic images in react causing issues */
+}
+
+.slide-container .slide {
+  width: 100%;
+}
+
+.slide-container .slide img {
+  width: 100%;
+}
+
+.nav-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  height: 100px;
+  width: 72px;
+  background-color: white;
+  box-shadow: 0 5px 12px 0 rgb(0 0 0 / 30%);
+}
+
+#arrow-left {
+  left: -15px;
+  border-radius: 0px 150px 150px 0;
+}
+
+#arrow-right {
+  right: -15px;
+  border-radius: 150px 0 0 150px;
+}
+
+.fas {
+  color: grey;
+  font-size: 4rem;
+}
+
+#arrow-left .fas {
+  position: relative;
+  left: -10px;
+}
+
+#arrow-right .fas {
+  position: relative;
+  right: -10px;
+}
