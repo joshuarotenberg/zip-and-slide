@@ -26,7 +26,14 @@ const Stats = ({images, activeSlide}) => {
     }, [activeSlide]);
 
     return (
-        <div>Stats</div>
+        <div className="counter"> 
+          {views.map((view, index) => (
+              <div className="stats" key={index}> 
+                <span className="title">slide {index}</span> 
+                <span className="count">{view.count}</span>
+              </div>
+          ))}
+         </div>
     )
 }
 

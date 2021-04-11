@@ -68,3 +68,23 @@
   position: relative;
   right: -10px;
 }
+
+.counter {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 3;
+}
+
+.stats .count {
+  font-size: 2rem;
+}
