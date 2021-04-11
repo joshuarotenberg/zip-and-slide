@@ -25,7 +25,7 @@ const Slider = ({images}) => {
 
     return (
         <>
-            <Stats images={images}/>
+            <Stats images={images} activeSlide={activeSlide} />
             <div className="slide-container">
                 <div className="slide">
                     <img className="fade" src={currentImage.url} alt={currentImage.url}  />

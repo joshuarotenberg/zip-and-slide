@@ -1,6 +1,6 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
-const Stats = ({images}) => {
+const Stats = ({images, activeSlide}) => {
 
     const initialState = images.map((_image, index) => {
         return (
@@ -9,6 +9,21 @@ const Stats = ({images}) => {
     });
 
     const [views, setViews] = useState(initialState);
+
+    useEffect(() => {
+       setViews((prevViews) => 
+        prevViews.map((views) => {
+            if (views.id === activeSlide) {
+                return {
+                    ...views,
+                    count: views.count + 1
+                }
+            } else {
+                return views;
+            }
+        })
+       )
+    }, [activeSlide]);
 
     return (
         <div>Stats</div>
